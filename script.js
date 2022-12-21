@@ -1,10 +1,10 @@
 "use strict";
 //========= API Urls ================ 
-const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=04c35731a5ee918f014970082a0088b1&&language=en-US&page=1`;
+const API_URL = `https://api.themoviedb.org/3/movie/popular?[api_key]&language=en-US&page=1`;
 
 const IMAGE_PATH = `http://image.tmdb.org/t/p/w500`;
 
-const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=04c35731a5ee918f014970082a0088b1&&query=`;
+const SEARCH_API = `https://api.themoviedb.org/3/search/movie?[api_key]&query=`;
 
 
 let mainContainer = document.querySelector("main");
