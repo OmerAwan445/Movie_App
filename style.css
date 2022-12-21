@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{font-size: 18px;}
+
+body{
+    font-family: 'Roboto Slab', serif;
+    background:rgb(34 ,39, 77);
+}
+
+header{
+    background-color:rgba(54, 61, 107);
+    padding: 1rem 5rem; 
+    /* To bring search bar to right*/
+    text-align:right;
+    margin-bottom: 10px;
+    }  
+.search-bar{
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    border: 0.1px solid rgb(132, 129, 129);
+    width: 15rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background-color: rgb(34 ,39, 77);
+    color: #eee;
+}
+
+.search-bar::placeholder{
+    color: rgb(130, 127, 127);
+}
+
+.search-bar:focus{
+    outline: none;
+}
+
+.search-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    color: rgb(190, 190, 193);
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.movie-card{
+    background-color: rgba(54, 61, 107);
+    max-width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-card img{
+    width: 300px;
+    height: 350px;
+}
+
+.movie-info{
+    color: #eee;
+    padding: 1rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.movie-title{
+    font-size: 1rem;
+}
+.movie-info span{
+    padding: 0.3rem;
+    background:rgb(34 ,39, 77);
+    border-radius: 5px;
+}
+
+.movie-info span.orange{
+    color: orange;
+}
+.movie-info span.red{
+    color: rgb(214, 85, 85);
+}
+.movie-info span.blue{
+    color: rgb(78, 78, 223);
+}
+
+
+.movie-overview{
+    opacity: 0;
+    position: absolute;
+    padding:0.5rem 2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(238, 238, 238,0.8);
+    height: 100%;
+    overflow: auto;
+    transform: translateY(100%);  
+    transition: 0.3s transform ease-in;
+}
+.movie-overview h3{margin-bottom: 10px;}
+.movie-card:hover .movie-overview{
+    transform: translateY(1%);
+    opacity: 1;
+}
